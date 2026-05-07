@@ -1,15 +1,15 @@
 ﻿# Open UI Scout
 
 <p align="center">
-  <strong>给 AI Coding Agent 用的前端 UI 资源选择 Skill</strong>
+  <strong>A frontend UI resource selection skill for AI coding agents</strong>
 </p>
 
 <p align="center">
-  先理解页面、产品气质、技术栈和生产约束，再从 GitHub 开源 UI 资源池里选择合适资源。
+  Understand the page, product mood, stack, and production constraints before choosing GitHub open-source UI resources.
 </p>
 
 <p align="center">
-  <a href="README.md">中文</a> · <a href="README.en.md">English</a> · <a href="#安装">安装</a> · <a href="#资源池分类">资源池分类</a> · <a href="RESOURCE_POOL.md">完整资源池</a>
+  <a href="README.md">中文</a> · <a href="README.en.md">English</a> · <a href="#install">Install</a> · <a href="#resource-categories">Resource Categories</a> · <a href="RESOURCE_POOL.md">Full Resource Pool</a>
 </p>
 
 <p align="center">
@@ -21,41 +21,41 @@
 
 ---
 
-## 这是什么
+## What It Is
 
-Open UI Scout 是一个通用、可公开分享的前端 UI 资源选择 skill。它不是 UI 库，也不是固定模板，而是一套给 Codex、Claude Code、Cursor、Windsurf、Gemini CLI 等 coding agents 使用的前端判断流程。
+Open UI Scout is a general, public-shareable frontend UI resource selection skill. It is not a UI library and it is not a fixed template. It gives Codex, Claude Code, Cursor, Windsurf, Gemini CLI, and similar coding agents a decision workflow before writing frontend code.
 
-它的目标很简单：**不要让 AI 一上来就套黑紫科技风或默认某个 UI 库，而是先理解产品，再选择合适的开源 UI 资源。**
+Its goal is simple: **do not let an agent default to black-purple AI aesthetics or one familiar UI library. Understand the product first, then select suitable open-source UI resources.**
 
-## 3 秒看懂
+## 3-Second Workflow
 
 ```text
-理解需求 -> 判断页面类型 -> 判断视觉气质 -> 检查现有技术栈 -> 评分候选资源 -> 最多选择 3 个主要 UI 来源 -> 生成一致的前端 UI
+Understand request -> Classify page type -> Classify visual mood -> Inspect stack -> Score candidates -> Select up to 3 primary UI sources -> Generate consistent UI
 ```
 
-Open UI Scout 会让 agent 先判断：
+Open UI Scout asks the agent to identify:
 
-- 页面类型：dashboard、landing page、AI chat、editor workspace、mobile H5 等
-- 产品气质：企业、温暖、极简、学术、创作者工具、premium SaaS 等
-- 技术栈：React、Next.js、Vue、Nuxt、Svelte、Astro、Tailwind、现有 UI 库等
-- 生产约束：license、维护状态、依赖体积、可访问性、响应式和一致性
+- Page type: dashboard, landing page, AI chat, editor workspace, mobile H5, and more
+- Product mood: enterprise, warm, minimal, academic, creator tool, premium SaaS, and more
+- Technical stack: React, Next.js, Vue, Nuxt, Svelte, Astro, Tailwind, existing UI systems, and more
+- Production constraints: license, maintenance, dependency cost, accessibility, responsiveness, and consistency
 
-## 适合谁用
+## Who It Is For
 
-| 你是谁 | Open UI Scout 帮你什么 |
+| User | How Open UI Scout Helps |
 | --- | --- |
-| Vibe coder | 快速让 AI 选对 UI 风格和资源，不再只会一种科技风 |
-| 前端开发者 | 让 agent 尊重项目现有技术栈，少乱装依赖 |
-| 产品 / 设计协作者 | 用页面类型和视觉 mood 沟通，而不是只说“好看一点” |
-| Coding agent 用户 | 给 Codex、Claude Code、Cursor、Windsurf、Gemini CLI 一个可执行的 UI 判断流程 |
+| Vibe coders | Helps AI choose a fitting UI direction instead of repeating one tech style |
+| Frontend developers | Keeps agents aligned with the current project stack and avoids random dependencies |
+| Product / design collaborators | Describes UI direction through page type and mood, not vague requests like "make it beautiful" |
+| Coding agent users | Gives Codex, Claude Code, Cursor, Windsurf, and Gemini CLI an executable UI selection workflow |
 
-## 安装
+## Install
 
-下面的命令可以直接复制运行。仓库默认分支是 `master`。
+Run one of the commands below. The default branch is `master`.
 
 ### Codex
 
-安装到当前用户的 Codex skills 目录。
+Install into the current user's Codex skills directory.
 
 **macOS / Linux / Git Bash**
 
@@ -74,11 +74,11 @@ Invoke-WebRequest `
   -OutFile "$env:USERPROFILE\.codex\skills\open-ui-scout\SKILL.md"
 ```
 
-安装后重启 Codex，让新 skill 生效。
+Restart Codex after installation.
 
 ### Claude Code
 
-安装到当前项目的 Claude Code skills 目录。
+Install into the current project's Claude Code skills directory.
 
 **macOS / Linux / Git Bash**
 
@@ -99,67 +99,66 @@ Invoke-WebRequest `
 
 ### Cursor / Windsurf / Gemini CLI
 
-下载根目录公开版 `SKILL.md`，然后把它作为项目规则或 agent instruction 使用。
+Download the public root `SKILL.md` and use it as a project rule or agent instruction.
 
 ```bash
 curl -L https://raw.githubusercontent.com/underfitting-lu/open-ui-scout/master/SKILL.md \
   -o OPEN_UI_SCOUT_SKILL.md
 ```
 
-### 克隆完整仓库
+### Clone The Full Repository
 
 ```bash
 git clone https://github.com/underfitting-lu/open-ui-scout.git
 cd open-ui-scout
 ```
 
-## 快速开始
+## Quick Start
 
 ```text
-使用 Open UI Scout 重做这个 dashboard。先检查当前项目栈，再选择 base UI、dashboard 资源和 chart/table 资源。
+Use Open UI Scout to redesign this dashboard. First inspect the current stack, then choose a base UI, dashboard resource, and chart/table resource.
 ```
 
 ```text
-做一个温暖、舒服的登录页。不要黑紫科技风。先用 Open UI Scout 选择合适的开源 UI 资源。
+Build a warm cozy login page. Avoid dark AI tech style. Use Open UI Scout to pick suitable open-source UI resources first.
 ```
 
 ```text
-设计一个 AI Chat 工作台，包含 streaming、tool call、attachments、empty state 和 retry 状态。最多使用 3 个 UI 来源。
+Create an AI chat workspace with streaming states, tool-call states, attachments, and a polished composer. Use no more than 3 UI sources.
 ```
 
-## 风格判断规则
+## Style Decision Rule
 
-- 用户明确说风格，就按用户说的来。
-- 用户没说风格，但上下文很明显，agent 可以推断，但要在 selection summary 里说明假设。
-- 用户没说风格，而且有多种可能，agent 应该先问，或给 2-3 个方向让用户选。
+- If the user explicitly names a style, follow it.
+- If the user does not name a style but the context strongly implies one, infer the mood and state the assumption in the selection summary.
+- If multiple moods are plausible, ask first or offer 2-3 directions before committing to resources.
 
-## 资源池分类
+## Resource Categories
 
-Open UI Scout 覆盖 **16 个资源组**、**707 个唯一 GitHub 仓库引用**。主页下面可以直接浏览每个分类的具体库；如果想看单独页面，见 [RESOURCE_POOL.md](RESOURCE_POOL.md)。
+Open UI Scout covers **16 resource groups** and **707 unique GitHub repository references**. You can browse the concrete libraries directly below. For a standalone resource page, see [RESOURCE_POOL.md](RESOURCE_POOL.md).
 
-| 分类 | 数量 | 适合场景 | 代表资源 |
+| Category | Count | Best For | Representative Resources |
 | --- | ---: | --- | --- |
-| [Meta Indexes And Discovery](#meta-indexes-and-discovery) | 22 | 发现更多 UI 资源、awesome 列表和真实项目参考 | awesome-shadcn-ui, awesome-tailwindcss, awesome-react, awesome-vue |
-| [React Next Base Ui Systems](#react-next-base-ui-systems) | 56 | React / Next.js 项目的基础组件系统、无头组件和企业 UI | shadcn/ui, Radix UI, Mantine, Ant Design, MUI, HeroUI |
-| [Shadcn Ecosystem Registries Blocks](#shadcn-ecosystem-registries-blocks) | 53 | shadcn/ui 生态、registry、blocks、SaaS 产品参考 | originui, reui, shadcn-ui-blocks, Magic UI, prompt-kit |
-| [Tailwind Component Blocks](#tailwind-component-blocks) | 47 | Tailwind blocks、轻量组件、样式工具和 CSS-in-JS | daisyUI, Flowbite, Preline, HyperUI, Meraki UI |
-| [Motion Visual Effects](#motion-visual-effects) | 47 | 动效、滚动、转场、视觉增强和轻量交互 | Magic UI, React Bits, Motion Primitives, GSAP, Framer Motion |
-| [Dashboard Admin Templates](#dashboard-admin-templates) | 51 | 后台、CRM、运营系统、数据管理和低代码 admin | Tremor, TailAdmin, Tabler, Ant Design Pro, react-admin |
-| [Landing Marketing Templates](#landing-marketing-templates) | 54 | Landing page、营销站、SaaS 模板、博客和文档站 | tailark, shadcnblocks, HyperUI, Preline, Astro, Vercel examples |
-| [Ai Chat Agent Ui](#ai-chat-agent-ui) | 46 | AI chat、agent workspace、LLM 应用和工具调用界面 | prompt-kit, assistant-ui, Vercel AI Chatbot, Lobe Chat, Open WebUI |
-| [Editor Canvas Diagram Workspace](#editor-canvas-diagram-workspace) | 77 | 编辑器、画布、白板、流程图、文档和设计工具 | tldraw, Excalidraw, xyflow, Konva, Fabric.js, Tiptap |
-| [Charts Tables Data Viz](#charts-tables-data-viz) | 56 | 图表、表格、地图、虚拟滚动、状态管理和数据可视化 | ECharts, Recharts, Nivo, TanStack Table, AG Grid, D3 |
-| [Vue Nuxt Ui](#vue-nuxt-ui) | 55 | Vue / Nuxt 项目的 UI 系统、组件库和生态工具 | Nuxt UI, shadcn-vue, Element Plus, Vuetify, PrimeVue, Vant |
-| [Svelte Solid Astro Multi Framework](#svelte-solid-astro-multi-framework) | 38 | Svelte、Solid、Astro、Qwik、Web Components 等多框架资源 | shadcn-svelte, Skeleton, Bits UI, Solid, Astro, Qwik |
-| [Mobile H5 App Ui](#mobile-h5-app-ui) | 34 | 移动 H5、React Native、Expo、Ionic、跨端和桌面壳 | Konsta UI, Ionic, Framework7, Ant Design Mobile, Vant, Expo |
-| [Icons Tokens Fonts Design Assets](#icons-tokens-fonts-design-assets) | 59 | 图标、设计 token、字体、emoji、插画和开发图标 | Lucide, Tabler Icons, Phosphor Icons, Heroicons, Radix Colors, Fontsource |
-| [Forms Validation Uploads Payments Auth](#forms-validation-uploads-payments-auth) | 39 | 表单、验证、上传、支付、认证和用户系统 | React Hook Form, Formik, Zod, Uppy, NextAuth, Stripe |
-| [Testing Accessibility Quality](#testing-accessibility-quality) | 39 | 测试、可访问性、性能、格式化、CI 和质量工具 | Storybook, Playwright, Testing Library, Vitest, axe-core, Lighthouse |
+| [Meta Indexes And Discovery](#meta-indexes-and-discovery) | 22 | Discovery indexes, awesome lists, and real product references | awesome-shadcn-ui, awesome-tailwindcss, awesome-react, awesome-vue |
+| [React Next Base Ui Systems](#react-next-base-ui-systems) | 56 | Base UI systems, headless components, and enterprise UI for React / Next.js | shadcn/ui, Radix UI, Mantine, Ant Design, MUI, HeroUI |
+| [Shadcn Ecosystem Registries Blocks](#shadcn-ecosystem-registries-blocks) | 53 | shadcn/ui ecosystem, registries, blocks, and SaaS product references | originui, reui, shadcn-ui-blocks, Magic UI, prompt-kit |
+| [Tailwind Component Blocks](#tailwind-component-blocks) | 47 | Tailwind blocks, lightweight components, styling utilities, and CSS-in-JS | daisyUI, Flowbite, Preline, HyperUI, Meraki UI |
+| [Motion Visual Effects](#motion-visual-effects) | 47 | Motion, scroll effects, transitions, visual polish, and lightweight interaction | Magic UI, React Bits, Motion Primitives, GSAP, Framer Motion |
+| [Dashboard Admin Templates](#dashboard-admin-templates) | 51 | Dashboards, CRM, admin systems, data management, and low-code admin tools | Tremor, TailAdmin, Tabler, Ant Design Pro, react-admin |
+| [Landing Marketing Templates](#landing-marketing-templates) | 54 | Landing pages, marketing sites, SaaS templates, blogs, and documentation sites | tailark, shadcnblocks, HyperUI, Preline, Astro, Vercel examples |
+| [Ai Chat Agent Ui](#ai-chat-agent-ui) | 46 | AI chat, agent workspaces, LLM apps, and tool-call interfaces | prompt-kit, assistant-ui, Vercel AI Chatbot, Lobe Chat, Open WebUI |
+| [Editor Canvas Diagram Workspace](#editor-canvas-diagram-workspace) | 77 | Editors, canvas tools, whiteboards, diagrams, docs, and design workspaces | tldraw, Excalidraw, xyflow, Konva, Fabric.js, Tiptap |
+| [Charts Tables Data Viz](#charts-tables-data-viz) | 56 | Charts, tables, maps, virtualization, state management, and data visualization | ECharts, Recharts, Nivo, TanStack Table, AG Grid, D3 |
+| [Vue Nuxt Ui](#vue-nuxt-ui) | 55 | UI systems, component libraries, and ecosystem tools for Vue / Nuxt | Nuxt UI, shadcn-vue, Element Plus, Vuetify, PrimeVue, Vant |
+| [Svelte Solid Astro Multi Framework](#svelte-solid-astro-multi-framework) | 38 | Svelte, Solid, Astro, Qwik, Web Components, and multi-framework resources | shadcn-svelte, Skeleton, Bits UI, Solid, Astro, Qwik |
+| [Mobile H5 App Ui](#mobile-h5-app-ui) | 34 | Mobile H5, React Native, Expo, Ionic, cross-platform, and desktop shell resources | Konsta UI, Ionic, Framework7, Ant Design Mobile, Vant, Expo |
+| [Icons Tokens Fonts Design Assets](#icons-tokens-fonts-design-assets) | 59 | Icons, design tokens, fonts, emoji, illustrations, and developer icons | Lucide, Tabler Icons, Phosphor Icons, Heroicons, Radix Colors, Fontsource |
+| [Forms Validation Uploads Payments Auth](#forms-validation-uploads-payments-auth) | 39 | Forms, validation, uploads, payments, auth, and user systems | React Hook Form, Formik, Zod, Uppy, NextAuth, Stripe |
+| [Testing Accessibility Quality](#testing-accessibility-quality) | 39 | Testing, accessibility, performance, formatting, CI, and quality tooling | Storybook, Playwright, Testing Library, Vitest, axe-core, Lighthouse |
 
+## Category Library Lists
 
-## 分类库清单
-
-> 这些资源是候选来源，不是本仓库打包依赖。每次使用前都要检查上游 license、维护状态、技术栈匹配和生产适用性。
+> These repositories are candidate sources, not bundled dependencies. Always verify upstream license, maintenance status, stack match, and production suitability before use.
 
 <details id="meta-indexes-and-discovery">
 <summary><strong>Meta Indexes And Discovery</strong> · 22 repos</summary>
@@ -1031,35 +1030,34 @@ Open UI Scout 覆盖 **16 个资源组**、**707 个唯一 GitHub 仓库引用**
 </details>
 
 
+## Third-Party UI Resources And Licenses
 
-## 第三方 UI 资源与许可证说明
+Open UI Scout itself is MIT licensed. See [LICENSE](LICENSE).
 
-Open UI Scout 本身使用 MIT License。见 [LICENSE](LICENSE)。
+The UI libraries, templates, blocks, icons, fonts, motion libraries, and tools mentioned in the resource pool belong to their respective authors and organizations and are governed by their own licenses. This repository does not bundle, redistribute, or claim ownership of those third-party projects.
 
-资源池里提到的 UI 库、模板、blocks、图标、字体、动效库和工具都属于各自作者或组织，并受各自仓库的许可证约束。本仓库不会把这些第三方项目的源代码、模板或资产重新打包发布。
+Use the resource pool with these rules:
 
-使用资源池时应遵守这些规则：
+- Check the upstream license before installing or copying any third-party code.
+- Avoid adding a dependency when the license is unclear, the repository is archived, or the maintenance status is not suitable for production.
+- Pay special attention to commercial use, attribution, redistribution, and modification rights for templates, blocks, icons, fonts, and illustrations.
+- If you only use layout inspiration, do not copy large copyrighted template code verbatim.
+- Add credits or NOTICE entries when required by the upstream license.
 
-- 安装或复制任何第三方代码前，先检查对应仓库的 license。
-- 如果 license 不清楚、仓库已归档、维护状态不适合生产使用，就不要作为依赖引入。
-- 对模板、blocks、图标、字体和插画尤其要确认商用、署名、再分发和修改权限。
-- 如果只是借鉴布局思路，也不要大段复制受版权保护的模板代码。
-- 在项目 README、About、Credits 或 NOTICE 中按第三方 license 要求进行署名。
+Open UI Scout helps agents choose and evaluate resources. It does not replace license review.
 
-简单说：Open UI Scout 帮你“选择和判断”，不替代第三方 license 检查。
+## Design Principles
 
-## 设计原则
+- Start from the product and page, not from a favorite UI library.
+- Respect explicit user style requests.
+- If style is implied, state the assumption; if multiple directions are reasonable, ask or offer choices.
+- Respect the existing project UI stack.
+- Use at most 3 primary UI sources per task.
+- Do not introduce a large UI library for one button or card.
+- Do not default to black-purple AI tech aesthetics.
+- Do not mix too many visual systems.
+- Keep UI responsive, accessible, state-complete, and maintainable.
 
-- 先理解产品和页面，不从喜欢的 UI 库开始。
-- 尊重用户明确指定的风格。
-- 风格不明确时，先推断并说明假设；多种方向都合理时，先问或给选项。
-- 尊重现有项目 UI 栈，不随便引入新体系。
-- 每次最多选择 3 个主要 UI 来源。
-- 不为了一个按钮或卡片引入大型 UI 库。
-- 不默认黑紫科技风。
-- 不混用过多视觉系统。
-- 关注响应式、可访问性、状态完整性和可维护性。
+## Contributing
 
-## 贡献
-
-欢迎贡献新的 GitHub UI 资源、页面类型、style mode 或修复失效仓库。提交 PR 前请阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。
+Contributions are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) before adding GitHub UI resources, page types, style modes, or fixing stale repositories.

@@ -1,141 +1,12 @@
-﻿# Open UI Scout
+﻿# Resource Pool
 
-<p align="center">
-  <strong>给 AI Coding Agent 用的前端 UI 资源选择 Skill</strong>
-</p>
+[中文 README](README.md) · [English README](README.en.md)
 
-<p align="center">
-  先理解页面、产品气质、技术栈和生产约束，再从 GitHub 开源 UI 资源池里选择合适资源。
-</p>
+Open UI Scout includes 707 unique GitHub repository references across 16 resource groups. These repositories are candidates for evaluation, not bundled dependencies.
 
-<p align="center">
-  <a href="README.md">中文</a> · <a href="README.en.md">English</a> · <a href="#安装">安装</a> · <a href="#资源池分类">资源池分类</a> · <a href="RESOURCE_POOL.md">完整资源池</a>
-</p>
+> Always verify repository existence, license, maintenance status, stack compatibility, and production suitability before installing or copying from any third-party resource.
 
-<p align="center">
-  <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-green">
-  <img alt="Skill" src="https://img.shields.io/badge/agent-skill-blue">
-  <img alt="Resource pool" src="https://img.shields.io/badge/resources-707%20repos-purple">
-  <img alt="Categories" src="https://img.shields.io/badge/categories-16-orange">
-</p>
-
----
-
-## 这是什么
-
-Open UI Scout 是一个通用、可公开分享的前端 UI 资源选择 skill。它不是 UI 库，也不是固定模板，而是一套给 Codex、Claude Code、Cursor、Windsurf、Gemini CLI 等 coding agents 使用的前端判断流程。
-
-它的目标很简单：**不要让 AI 一上来就套黑紫科技风或默认某个 UI 库，而是先理解产品，再选择合适的开源 UI 资源。**
-
-## 3 秒看懂
-
-```text
-理解需求 -> 判断页面类型 -> 判断视觉气质 -> 检查现有技术栈 -> 评分候选资源 -> 最多选择 3 个主要 UI 来源 -> 生成一致的前端 UI
-```
-
-Open UI Scout 会让 agent 先判断：
-
-- 页面类型：dashboard、landing page、AI chat、editor workspace、mobile H5 等
-- 产品气质：企业、温暖、极简、学术、创作者工具、premium SaaS 等
-- 技术栈：React、Next.js、Vue、Nuxt、Svelte、Astro、Tailwind、现有 UI 库等
-- 生产约束：license、维护状态、依赖体积、可访问性、响应式和一致性
-
-## 适合谁用
-
-| 你是谁 | Open UI Scout 帮你什么 |
-| --- | --- |
-| Vibe coder | 快速让 AI 选对 UI 风格和资源，不再只会一种科技风 |
-| 前端开发者 | 让 agent 尊重项目现有技术栈，少乱装依赖 |
-| 产品 / 设计协作者 | 用页面类型和视觉 mood 沟通，而不是只说“好看一点” |
-| Coding agent 用户 | 给 Codex、Claude Code、Cursor、Windsurf、Gemini CLI 一个可执行的 UI 判断流程 |
-
-## 安装
-
-下面的命令可以直接复制运行。仓库默认分支是 `master`。
-
-### Codex
-
-安装到当前用户的 Codex skills 目录。
-
-**macOS / Linux / Git Bash**
-
-```bash
-mkdir -p ~/.codex/skills/open-ui-scout
-curl -L https://raw.githubusercontent.com/underfitting-lu/open-ui-scout/master/.claude/skills/open-ui-scout/SKILL.md \
-  -o ~/.codex/skills/open-ui-scout/SKILL.md
-```
-
-**Windows PowerShell**
-
-```powershell
-New-Item -ItemType Directory -Force "$env:USERPROFILE\.codex\skills\open-ui-scout"
-Invoke-WebRequest `
-  -Uri "https://raw.githubusercontent.com/underfitting-lu/open-ui-scout/master/.claude/skills/open-ui-scout/SKILL.md" `
-  -OutFile "$env:USERPROFILE\.codex\skills\open-ui-scout\SKILL.md"
-```
-
-安装后重启 Codex，让新 skill 生效。
-
-### Claude Code
-
-安装到当前项目的 Claude Code skills 目录。
-
-**macOS / Linux / Git Bash**
-
-```bash
-mkdir -p .claude/skills/open-ui-scout
-curl -L https://raw.githubusercontent.com/underfitting-lu/open-ui-scout/master/.claude/skills/open-ui-scout/SKILL.md \
-  -o .claude/skills/open-ui-scout/SKILL.md
-```
-
-**Windows PowerShell**
-
-```powershell
-New-Item -ItemType Directory -Force ".\.claude\skills\open-ui-scout"
-Invoke-WebRequest `
-  -Uri "https://raw.githubusercontent.com/underfitting-lu/open-ui-scout/master/.claude/skills/open-ui-scout/SKILL.md" `
-  -OutFile ".\.claude\skills\open-ui-scout\SKILL.md"
-```
-
-### Cursor / Windsurf / Gemini CLI
-
-下载根目录公开版 `SKILL.md`，然后把它作为项目规则或 agent instruction 使用。
-
-```bash
-curl -L https://raw.githubusercontent.com/underfitting-lu/open-ui-scout/master/SKILL.md \
-  -o OPEN_UI_SCOUT_SKILL.md
-```
-
-### 克隆完整仓库
-
-```bash
-git clone https://github.com/underfitting-lu/open-ui-scout.git
-cd open-ui-scout
-```
-
-## 快速开始
-
-```text
-使用 Open UI Scout 重做这个 dashboard。先检查当前项目栈，再选择 base UI、dashboard 资源和 chart/table 资源。
-```
-
-```text
-做一个温暖、舒服的登录页。不要黑紫科技风。先用 Open UI Scout 选择合适的开源 UI 资源。
-```
-
-```text
-设计一个 AI Chat 工作台，包含 streaming、tool call、attachments、empty state 和 retry 状态。最多使用 3 个 UI 来源。
-```
-
-## 风格判断规则
-
-- 用户明确说风格，就按用户说的来。
-- 用户没说风格，但上下文很明显，agent 可以推断，但要在 selection summary 里说明假设。
-- 用户没说风格，而且有多种可能，agent 应该先问，或给 2-3 个方向让用户选。
-
-## 资源池分类
-
-Open UI Scout 覆盖 **16 个资源组**、**707 个唯一 GitHub 仓库引用**。主页下面可以直接浏览每个分类的具体库；如果想看单独页面，见 [RESOURCE_POOL.md](RESOURCE_POOL.md)。
+## Overview
 
 | 分类 | 数量 | 适合场景 | 代表资源 |
 | --- | ---: | --- | --- |
@@ -156,10 +27,7 @@ Open UI Scout 覆盖 **16 个资源组**、**707 个唯一 GitHub 仓库引用**
 | [Forms Validation Uploads Payments Auth](#forms-validation-uploads-payments-auth) | 39 | 表单、验证、上传、支付、认证和用户系统 | React Hook Form, Formik, Zod, Uppy, NextAuth, Stripe |
 | [Testing Accessibility Quality](#testing-accessibility-quality) | 39 | 测试、可访问性、性能、格式化、CI 和质量工具 | Storybook, Playwright, Testing Library, Vitest, axe-core, Lighthouse |
 
-
-## 分类库清单
-
-> 这些资源是候选来源，不是本仓库打包依赖。每次使用前都要检查上游 license、维护状态、技术栈匹配和生产适用性。
+## Full Category Lists
 
 <details id="meta-indexes-and-discovery">
 <summary><strong>Meta Indexes And Discovery</strong> · 22 repos</summary>
@@ -1030,36 +898,3 @@ Open UI Scout 覆盖 **16 个资源组**、**707 个唯一 GitHub 仓库引用**
 
 </details>
 
-
-
-## 第三方 UI 资源与许可证说明
-
-Open UI Scout 本身使用 MIT License。见 [LICENSE](LICENSE)。
-
-资源池里提到的 UI 库、模板、blocks、图标、字体、动效库和工具都属于各自作者或组织，并受各自仓库的许可证约束。本仓库不会把这些第三方项目的源代码、模板或资产重新打包发布。
-
-使用资源池时应遵守这些规则：
-
-- 安装或复制任何第三方代码前，先检查对应仓库的 license。
-- 如果 license 不清楚、仓库已归档、维护状态不适合生产使用，就不要作为依赖引入。
-- 对模板、blocks、图标、字体和插画尤其要确认商用、署名、再分发和修改权限。
-- 如果只是借鉴布局思路，也不要大段复制受版权保护的模板代码。
-- 在项目 README、About、Credits 或 NOTICE 中按第三方 license 要求进行署名。
-
-简单说：Open UI Scout 帮你“选择和判断”，不替代第三方 license 检查。
-
-## 设计原则
-
-- 先理解产品和页面，不从喜欢的 UI 库开始。
-- 尊重用户明确指定的风格。
-- 风格不明确时，先推断并说明假设；多种方向都合理时，先问或给选项。
-- 尊重现有项目 UI 栈，不随便引入新体系。
-- 每次最多选择 3 个主要 UI 来源。
-- 不为了一个按钮或卡片引入大型 UI 库。
-- 不默认黑紫科技风。
-- 不混用过多视觉系统。
-- 关注响应式、可访问性、状态完整性和可维护性。
-
-## 贡献
-
-欢迎贡献新的 GitHub UI 资源、页面类型、style mode 或修复失效仓库。提交 PR 前请阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。

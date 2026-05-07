@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.4
+
+- Redesigned the GitHub project homepage with category overview and collapsible resource lists.
+- Added `README.en.md` for full-page English language switching.
+- Added `RESOURCE_POOL.md` with the complete categorized GitHub UI resource pool.
+
 ## 0.1.3
 
 - Added complete copy-paste installation commands for Codex, Claude Code, and other coding agents.
