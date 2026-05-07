@@ -87,6 +87,7 @@ Open UI Scout covers:
 ## Design Principles
 
 - Start from the product and page, not from a favorite library.
+- Follow explicit style requests. When style is implied, state the assumption. When several styles are plausible, ask first or offer 2-3 directions.
 - Respect the existing project stack.
 - Select a small coherent set of resources.
 - Score candidates for stack fit, page fit, mood fit, dependency cost, license clarity, maintenance, and accessibility.
@@ -109,4 +110,3 @@ MIT License. See [LICENSE](LICENSE).
 ## Contributing
 
 Contributions are welcome. Please see [CONTRIBUTING.md](CONTRIBUTING.md) before adding repositories, page types, style modes, or workflow rules.
-

@@ -94,7 +94,7 @@ Before selecting any UI source, identify:
 - current or requested technical stack
 - production constraints such as accessibility, responsiveness, licensing, bundle cost, delivery speed, design-system compatibility, and maintainability
 
-If key information is missing, infer conservatively from the product context. Ask a clarifying question only when the answer would materially change the UI stack or implementation.
+If key information is missing, infer conservatively from the product context. Ask a clarifying question when the missing answer would materially change the UI stack, implementation, or visual direction.
 
 ### Step 1: Inspect the Current Project
 
@@ -161,6 +161,12 @@ If the page type is unclear, infer the most likely type from the product descrip
 ### Step 3: Classify the Visual Mood
 
 Infer the intended mood. The user may describe it directly or indirectly.
+
+Use this style ambiguity rule:
+
+1. If the user explicitly names a style, follow that style.
+2. If the user does not name a style but the product context strongly implies one, infer the mood and state the assumption in the selection summary.
+3. If the user does not name a style and multiple moods would be plausible, ask a clarifying question or offer 2-3 concise directions for the user to choose from before committing to resources.
 
 Supported mood labels:
 
