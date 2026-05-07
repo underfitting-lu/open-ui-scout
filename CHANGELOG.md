@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.2
+
+- Reworked README into a clearer GitHub landing page with Chinese-first bilingual content.
+- Added third-party UI resource and license clarification.
+- Added a quick candidate UI resource table for common frontend scenarios.
+
 ## 0.1.1
 
 - Added explicit style ambiguity handling: follow named styles, state inferred assumptions, and ask or offer 2-3 directions when multiple moods are plausible.
