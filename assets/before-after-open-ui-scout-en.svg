@@ -1,0 +1,75 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Open UI Scout before and after comparison</title>
+  <desc id="desc">The left side shows AI hand-rolling UI from memory. The right side shows Open UI Scout inspecting the project, scouting GitHub UI references, scoring candidates, and recombining UI for the current project.</desc>
+  <rect width="1200" height="720" rx="28" fill="#F8FAFC"/>
+  <rect x="28" y="28" width="1144" height="664" rx="24" fill="white" stroke="#E2E8F0"/>
+
+  <text x="600" y="78" text-anchor="middle" fill="#0F172A" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="34" font-weight="800">Stop letting AI hand-roll UI from nothing</text>
+  <text x="600" y="114" text-anchor="middle" fill="#475569" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="17">The same frontend request leads to a very different workflow with Open UI Scout</text>
+
+  <rect x="70" y="150" width="500" height="500" rx="22" fill="#FFF7ED" stroke="#FDBA74"/>
+  <rect x="630" y="150" width="500" height="500" rx="22" fill="#F0FDF4" stroke="#86EFAC"/>
+
+  <text x="110" y="202" fill="#9A3412" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="24" font-weight="800">Before: closed-room generation</text>
+  <text x="110" y="232" fill="#C2410C" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="15">A good prompt can still produce UI that does not fit the project</text>
+
+  <rect x="110" y="270" width="420" height="64" rx="14" fill="white" stroke="#FED7AA"/>
+  <text x="132" y="298" fill="#7C2D12" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16" font-weight="700">1. Generate immediately</text>
+  <text x="132" y="319" fill="#9A3412" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="13">No project scan, UI stack check, or token review</text>
+
+  <rect x="110" y="350" width="420" height="64" rx="14" fill="white" stroke="#FED7AA"/>
+  <text x="132" y="378" fill="#7C2D12" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16" font-weight="700">2. Hand-roll from model memory</text>
+  <text x="132" y="399" fill="#9A3412" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="13">Generic SaaS tech style shows up again</text>
+
+  <rect x="110" y="430" width="420" height="64" rx="14" fill="white" stroke="#FED7AA"/>
+  <text x="132" y="458" fill="#7C2D12" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16" font-weight="700">3. Stack and dependency drift</text>
+  <text x="132" y="479" fill="#9A3412" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="13">Large libraries or mixed UI systems for small needs</text>
+
+  <rect x="110" y="520" width="420" height="74" rx="16" fill="#FFEDD5" stroke="#FDBA74"/>
+  <text x="132" y="550" fill="#7C2D12" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16" font-weight="800">Result</text>
+  <text x="132" y="574" fill="#9A3412" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14">It runs, but feels like another template project</text>
+
+  <g opacity="0.62">
+    <rect x="356" y="266" width="142" height="86" rx="12" fill="#111827"/>
+    <rect x="372" y="284" width="46" height="8" rx="4" fill="#A78BFA"/>
+    <rect x="372" y="302" width="84" height="8" rx="4" fill="#4B5563"/>
+    <rect x="372" y="322" width="106" height="12" rx="6" fill="#7C3AED"/>
+    <circle cx="474" cy="288" r="10" fill="#EC4899"/>
+  </g>
+
+  <text x="670" y="202" fill="#166534" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="24" font-weight="800">After: scout, then recombine</text>
+  <text x="670" y="232" fill="#15803D" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="15">Choose fitting references from 700+ GitHub frontend UI projects</text>
+
+  <rect x="670" y="270" width="420" height="64" rx="14" fill="white" stroke="#BBF7D0"/>
+  <text x="692" y="298" fill="#14532D" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16" font-weight="700">1. Inspect the current project</text>
+  <text x="692" y="319" fill="#166534" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="13">Framework, UI stack, folders, and design tokens</text>
+
+  <rect x="670" y="350" width="420" height="64" rx="14" fill="white" stroke="#BBF7D0"/>
+  <text x="692" y="378" fill="#14532D" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16" font-weight="700">2. Scout real GitHub references</text>
+  <text x="692" y="399" fill="#166534" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="13">Dashboards, AI chat, editors, charts, tokens, and more</text>
+
+  <rect x="670" y="430" width="420" height="64" rx="14" fill="white" stroke="#BBF7D0"/>
+  <text x="692" y="458" fill="#14532D" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16" font-weight="700">3. Score and pick up to 3 sources</text>
+  <text x="692" y="479" fill="#166534" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="13">Stack fit, mood fit, license, maintenance, dependency cost</text>
+
+  <rect x="670" y="520" width="420" height="74" rx="16" fill="#DCFCE7" stroke="#86EFAC"/>
+  <text x="692" y="550" fill="#14532D" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16" font-weight="800">Result</text>
+  <text x="692" y="574" fill="#166534" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14">The UI feels like part of the current product</text>
+
+  <g opacity="0.95">
+    <rect x="932" y="267" width="128" height="88" rx="12" fill="#F8FAFC" stroke="#BBF7D0"/>
+    <rect x="948" y="284" width="82" height="8" rx="4" fill="#22C55E"/>
+    <rect x="948" y="304" width="96" height="8" rx="4" fill="#CBD5E1"/>
+    <rect x="948" y="326" width="32" height="16" rx="5" fill="#DCFCE7"/>
+    <rect x="986" y="326" width="32" height="16" rx="5" fill="#DBEAFE"/>
+    <rect x="1024" y="326" width="20" height="16" rx="5" fill="#F1F5F9"/>
+  </g>
+
+  <path d="M578 402H622" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+  <path d="M614 392L624 402L614 412" stroke="#94A3B8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="520" y="370" width="160" height="62" rx="31" fill="#F8FAFC" stroke="#CBD5E1"/>
+  <text x="600" y="397" text-anchor="middle" fill="#334155" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="13" font-weight="800">Open UI Scout</text>
+  <text x="600" y="416" text-anchor="middle" fill="#64748B" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="12">UI scouting layer</text>
+
+  <text x="600" y="665" text-anchor="middle" fill="#64748B" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14">Not more prompt magic. Real project references, scored and adapted for the current codebase.</text>
+</svg>

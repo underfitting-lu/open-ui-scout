@@ -1,0 +1,75 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Open UI Scout 使用前后对比</title>
+  <desc id="desc">左侧展示 AI 凭空手搓 UI 时容易出现通用模板、不适配项目、乱加依赖等问题；右侧展示使用 Open UI Scout 后先检查项目、从 GitHub 700 多个 UI 项目中选择参考源，再重组适配当前项目的 UI。</desc>
+  <rect width="1200" height="720" rx="28" fill="#F8FAFC"/>
+  <rect x="28" y="28" width="1144" height="664" rx="24" fill="white" stroke="#E2E8F0"/>
+
+  <text x="600" y="78" text-anchor="middle" fill="#0F172A" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="34" font-weight="800">别让 AI 再凭空手搓 UI</text>
+  <text x="600" y="114" text-anchor="middle" fill="#475569" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="17">同一个前端需求，使用 Open UI Scout 前后，AI 的工作方式完全不同</text>
+
+  <rect x="70" y="150" width="500" height="500" rx="22" fill="#FFF7ED" stroke="#FDBA74"/>
+  <rect x="630" y="150" width="500" height="500" rx="22" fill="#F0FDF4" stroke="#86EFAC"/>
+
+  <text x="110" y="202" fill="#9A3412" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="24" font-weight="800">使用前：AI 闭门造车</text>
+  <text x="110" y="232" fill="#C2410C" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="15">Prompt 写得很细，但 UI 仍可能不适配当前项目</text>
+
+  <rect x="110" y="270" width="420" height="64" rx="14" fill="white" stroke="#FED7AA"/>
+  <text x="132" y="298" fill="#7C2D12" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16" font-weight="700">1. 直接开始生成</text>
+  <text x="132" y="319" fill="#9A3412" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="13">不先看 package.json、UI 库、设计 token</text>
+
+  <rect x="110" y="350" width="420" height="64" rx="14" fill="white" stroke="#FED7AA"/>
+  <text x="132" y="378" fill="#7C2D12" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16" font-weight="700">2. 凭模型记忆手搓</text>
+  <text x="132" y="399" fill="#9A3412" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="13">容易套默认 SaaS 黑紫科技风</text>
+
+  <rect x="110" y="430" width="420" height="64" rx="14" fill="white" stroke="#FED7AA"/>
+  <text x="132" y="458" fill="#7C2D12" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16" font-weight="700">3. 依赖和组件容易跑偏</text>
+  <text x="132" y="479" fill="#9A3412" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="13">为一个卡片引入大库，或混用多个 UI 系统</text>
+
+  <rect x="110" y="520" width="420" height="74" rx="16" fill="#FFEDD5" stroke="#FDBA74"/>
+  <text x="132" y="550" fill="#7C2D12" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16" font-weight="800">结果</text>
+  <text x="132" y="574" fill="#9A3412" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14">页面能跑，但像另一个模板项目</text>
+
+  <g opacity="0.62">
+    <rect x="356" y="266" width="142" height="86" rx="12" fill="#111827"/>
+    <rect x="372" y="284" width="46" height="8" rx="4" fill="#A78BFA"/>
+    <rect x="372" y="302" width="84" height="8" rx="4" fill="#4B5563"/>
+    <rect x="372" y="322" width="106" height="12" rx="6" fill="#7C3AED"/>
+    <circle cx="474" cy="288" r="10" fill="#EC4899"/>
+  </g>
+
+  <text x="670" y="202" fill="#166534" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="24" font-weight="800">使用后：先侦察，再重组</text>
+  <text x="670" y="232" fill="#15803D" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="15">从 700+ GitHub 前端 UI 项目里选择适配当前项目的参考源</text>
+
+  <rect x="670" y="270" width="420" height="64" rx="14" fill="white" stroke="#BBF7D0"/>
+  <text x="692" y="298" fill="#14532D" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16" font-weight="700">1. 先检查当前项目</text>
+  <text x="692" y="319" fill="#166534" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="13">框架、UI 栈、组件目录、设计 token</text>
+
+  <rect x="670" y="350" width="420" height="64" rx="14" fill="white" stroke="#BBF7D0"/>
+  <text x="692" y="378" fill="#14532D" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16" font-weight="700">2. 去 GitHub 找真实参考</text>
+  <text x="692" y="399" fill="#166534" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="13">dashboard、AI chat、editor、charts、tokens 等</text>
+
+  <rect x="670" y="430" width="420" height="64" rx="14" fill="white" stroke="#BBF7D0"/>
+  <text x="692" y="458" fill="#14532D" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16" font-weight="700">3. 评分后最多选 3 个来源</text>
+  <text x="692" y="479" fill="#166534" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="13">匹配技术栈、视觉气质、license、维护状态</text>
+
+  <rect x="670" y="520" width="420" height="74" rx="16" fill="#DCFCE7" stroke="#86EFAC"/>
+  <text x="692" y="550" fill="#14532D" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16" font-weight="800">结果</text>
+  <text x="692" y="574" fill="#166534" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14">UI 更像当前产品的一部分</text>
+
+  <g opacity="0.95">
+    <rect x="932" y="267" width="128" height="88" rx="12" fill="#F8FAFC" stroke="#BBF7D0"/>
+    <rect x="948" y="284" width="82" height="8" rx="4" fill="#22C55E"/>
+    <rect x="948" y="304" width="96" height="8" rx="4" fill="#CBD5E1"/>
+    <rect x="948" y="326" width="32" height="16" rx="5" fill="#DCFCE7"/>
+    <rect x="986" y="326" width="32" height="16" rx="5" fill="#DBEAFE"/>
+    <rect x="1024" y="326" width="20" height="16" rx="5" fill="#F1F5F9"/>
+  </g>
+
+  <path d="M578 402H622" stroke="#94A3B8" stroke-width="3" stroke-linecap="round"/>
+  <path d="M614 392L624 402L614 412" stroke="#94A3B8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="520" y="370" width="160" height="62" rx="31" fill="#F8FAFC" stroke="#CBD5E1"/>
+  <text x="600" y="397" text-anchor="middle" fill="#334155" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="13" font-weight="800">Open UI Scout</text>
+  <text x="600" y="416" text-anchor="middle" fill="#64748B" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="12">UI scouting layer</text>
+
+  <text x="600" y="665" text-anchor="middle" fill="#64748B" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14">不是让 AI 多背 prompt，而是让 AI 先看真实项目、选对参考、再适配当前工程。</text>
+</svg>

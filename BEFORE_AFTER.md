@@ -4,6 +4,10 @@
 
 这个页面展示同一个前端需求，在 **不使用 Open UI Scout** 和 **使用 Open UI Scout** 时，AI coding agent 的工作方式会有什么不同。
 
+<p align="center">
+  <img src="assets/before-after-open-ui-scout.svg" alt="Open UI Scout 使用前后对比图">
+</p>
+
 ## 示例需求
 
 ```text
@@ -146,4 +150,3 @@ Open UI Scout 的价值不是让 prompt 更玄学，而是让 AI 在写 UI 前�
 ```text
 先看真实项目 -> 选对参考 -> 评估适配性 -> 再为当前项目重组 UI
 ```
-
