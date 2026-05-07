@@ -52,29 +52,83 @@ Open UI Scout 让 agent 先回答这些问题：
 
 ## 安装
 
-### Claude Code
-
-把 skill 放到项目内：
-
-```text
-.claude/skills/open-ui-scout/SKILL.md
-```
-
-本仓库已经包含这个路径。
+下面的命令可以直接复制运行。仓库默认分支是 `master`。
 
 ### Codex
 
-Codex 可以通过仓库根目录的 `AGENTS.md` 入口读取规则。关键 skill 文件位于：
+安装到当前用户的 Codex skills 目录。
 
-```text
-.claude/skills/open-ui-scout/SKILL.md
+**macOS / Linux / Git Bash**
+
+```bash
+mkdir -p ~/.codex/skills/open-ui-scout
+curl -L https://raw.githubusercontent.com/underfitting-lu/open-ui-scout/master/.claude/skills/open-ui-scout/SKILL.md \
+  -o ~/.codex/skills/open-ui-scout/SKILL.md
 ```
 
-做前端 UI 任务时，让 Codex 先读取 Open UI Scout，再选择 UI 资源和写代码。
+**Windows PowerShell**
+
+```powershell
+New-Item -ItemType Directory -Force "$env:USERPROFILE\.codex\skills\open-ui-scout"
+Invoke-WebRequest `
+  -Uri "https://raw.githubusercontent.com/underfitting-lu/open-ui-scout/master/.claude/skills/open-ui-scout/SKILL.md" `
+  -OutFile "$env:USERPROFILE\.codex\skills\open-ui-scout\SKILL.md"
+```
+
+安装后重启 Codex，让新 skill 生效。
+
+### Claude Code
+
+安装到当前项目的 Claude Code skills 目录。
+
+**macOS / Linux / Git Bash**
+
+```bash
+mkdir -p .claude/skills/open-ui-scout
+curl -L https://raw.githubusercontent.com/underfitting-lu/open-ui-scout/master/.claude/skills/open-ui-scout/SKILL.md \
+  -o .claude/skills/open-ui-scout/SKILL.md
+```
+
+**Windows PowerShell**
+
+```powershell
+New-Item -ItemType Directory -Force ".\.claude\skills\open-ui-scout"
+Invoke-WebRequest `
+  -Uri "https://raw.githubusercontent.com/underfitting-lu/open-ui-scout/master/.claude/skills/open-ui-scout/SKILL.md" `
+  -OutFile ".\.claude\skills\open-ui-scout\SKILL.md"
+```
+
+### 作为完整仓库克隆
+
+如果你想同时保留 `README.md`、`AGENTS.md`、`AUDIT.md` 和贡献说明：
+
+```bash
+git clone https://github.com/underfitting-lu/open-ui-scout.git
+cd open-ui-scout
+```
+
+Codex 也可以通过仓库根目录的 `AGENTS.md` 入口读取规则。
 
 ### Cursor / Windsurf / Gemini CLI
 
-可以把根目录的 `SKILL.md` 作为项目规则或 agent instruction 使用。建议在规则中写明：
+下载根目录公开版 `SKILL.md`，然后把它作为项目规则或 agent instruction 使用。
+
+**macOS / Linux / Git Bash**
+
+```bash
+curl -L https://raw.githubusercontent.com/underfitting-lu/open-ui-scout/master/SKILL.md \
+  -o OPEN_UI_SCOUT_SKILL.md
+```
+
+**Windows PowerShell**
+
+```powershell
+Invoke-WebRequest `
+  -Uri "https://raw.githubusercontent.com/underfitting-lu/open-ui-scout/master/SKILL.md" `
+  -OutFile ".\OPEN_UI_SCOUT_SKILL.md"
+```
+
+建议在项目规则中写明：
 
 ```text
 Frontend UI tasks must read Open UI Scout first and output a short selection summary before implementation.
@@ -215,13 +269,58 @@ Understand request -> Classify page type -> Classify visual mood -> Inspect stac
 
 ## Install
 
-For Claude Code:
+Run one of the commands below. The default branch is `master`.
 
-```text
-.claude/skills/open-ui-scout/SKILL.md
+### Codex
+
+**macOS / Linux / Git Bash**
+
+```bash
+mkdir -p ~/.codex/skills/open-ui-scout
+curl -L https://raw.githubusercontent.com/underfitting-lu/open-ui-scout/master/.claude/skills/open-ui-scout/SKILL.md \
+  -o ~/.codex/skills/open-ui-scout/SKILL.md
 ```
 
-For Codex, use the repository-level `AGENTS.md` entry. For Cursor, Windsurf, and Gemini CLI, use `SKILL.md` as a project rule or instruction file.
+**Windows PowerShell**
+
+```powershell
+New-Item -ItemType Directory -Force "$env:USERPROFILE\.codex\skills\open-ui-scout"
+Invoke-WebRequest `
+  -Uri "https://raw.githubusercontent.com/underfitting-lu/open-ui-scout/master/.claude/skills/open-ui-scout/SKILL.md" `
+  -OutFile "$env:USERPROFILE\.codex\skills\open-ui-scout\SKILL.md"
+```
+
+Restart Codex after installation.
+
+### Claude Code
+
+Install into the current project:
+
+**macOS / Linux / Git Bash**
+
+```bash
+mkdir -p .claude/skills/open-ui-scout
+curl -L https://raw.githubusercontent.com/underfitting-lu/open-ui-scout/master/.claude/skills/open-ui-scout/SKILL.md \
+  -o .claude/skills/open-ui-scout/SKILL.md
+```
+
+**Windows PowerShell**
+
+```powershell
+New-Item -ItemType Directory -Force ".\.claude\skills\open-ui-scout"
+Invoke-WebRequest `
+  -Uri "https://raw.githubusercontent.com/underfitting-lu/open-ui-scout/master/.claude/skills/open-ui-scout/SKILL.md" `
+  -OutFile ".\.claude\skills\open-ui-scout\SKILL.md"
+```
+
+### Clone The Full Repository
+
+```bash
+git clone https://github.com/underfitting-lu/open-ui-scout.git
+cd open-ui-scout
+```
+
+For Cursor, Windsurf, and Gemini CLI, download `SKILL.md` and use it as a project rule or instruction file.
 
 ## Style Decision Rule
 

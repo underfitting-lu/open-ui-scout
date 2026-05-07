@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.3
+
+- Added complete copy-paste installation commands for Codex, Claude Code, and other coding agents.
+
 ## 0.1.2
 
 - Reworked README into a clearer GitHub landing page with Chinese-first bilingual content.
