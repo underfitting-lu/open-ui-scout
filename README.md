@@ -49,10 +49,6 @@ Open UI Scout 不是教 AI 写 prompt。
 
 同一个 prompt，结果会完全不一样。
 
-<p align="center">
-  <img src="assets/before-after-open-ui-scout.svg" alt="Open UI Scout 使用前后对比图">
-</p>
-
 | 维度 | 不使用 Open UI Scout | 使用 Open UI Scout |
 | --- | --- | --- |
 | 起点 | AI 直接开始手搓 UI | 先检查当前项目，再去 GitHub 资源池找参考 |

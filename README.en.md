@@ -49,10 +49,6 @@ You can write a detailed prompt: make it modern, premium, responsive, dashboard-
 
 The same prompt leads to very different behavior.
 
-<p align="center">
-  <img src="assets/before-after-open-ui-scout-en.svg" alt="Open UI Scout before and after comparison">
-</p>
-
 | Dimension | Without Open UI Scout | With Open UI Scout |
 | --- | --- | --- |
 | Starting point | AI starts hand-rolling UI immediately | Inspect the current project, then scout GitHub references |
