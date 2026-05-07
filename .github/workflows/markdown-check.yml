@@ -1,0 +1,21 @@
+name: Markdown Check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  required-files:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check required Markdown files
+        shell: bash
+        run: |
+          test -f SKILL.md
+          test -f README.md
+          test -f AGENTS.md
+          test -f .claude/skills/open-ui-scout/SKILL.md
+
