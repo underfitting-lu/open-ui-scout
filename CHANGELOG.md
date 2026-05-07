@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.5
+
+- Repositioned the GitHub homepage around GitHub UI scouting instead of prompt writing.
+- Added clearer pain points around prompt-fit vs project-fit and AI-generated UI that ignores existing stacks.
+
 ## 0.1.4
 
 - Redesigned the GitHub project homepage with category overview and collapsible resource lists.

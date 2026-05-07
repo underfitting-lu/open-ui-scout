@@ -1,11 +1,11 @@
 ﻿# Open UI Scout
 
 <p align="center">
-  <strong>给 AI Coding Agent 用的前端 UI 资源选择 Skill</strong>
+  <strong>别让 AI 再凭空手搓 UI</strong>
 </p>
 
 <p align="center">
-  先理解页面、产品气质、技术栈和生产约束，再从 GitHub 开源 UI 资源池里选择合适资源。
+  Open UI Scout 会先理解页面类型、产品气质和技术栈，再从 GitHub 高质量开源前端项目里选择参考源，让 AI 基于真实项目生成更稳定、更好看的界面。
 </p>
 
 <p align="center">
@@ -15,7 +15,7 @@
 <p align="center">
   <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-green">
   <img alt="Skill" src="https://img.shields.io/badge/agent-skill-blue">
-  <img alt="Resource pool" src="https://img.shields.io/badge/resources-707%20repos-purple">
+  <img alt="Resource pool" src="https://img.shields.io/badge/GitHub%20UI%20pool-707%20repos-purple">
   <img alt="Categories" src="https://img.shields.io/badge/categories-16-orange">
 </p>
 
@@ -23,14 +23,32 @@
 
 ## 这是什么
 
-Open UI Scout 是一个通用、可公开分享的前端 UI 资源选择 skill。它不是 UI 库，也不是固定模板，而是一套给 Codex、Claude Code、Cursor、Windsurf、Gemini CLI 等 coding agents 使用的前端判断流程。
+Open UI Scout 不是教 AI 写 prompt。
 
-它的目标很简单：**不要让 AI 一上来就套黑紫科技风或默认某个 UI 库，而是先理解产品，再选择合适的开源 UI 资源。**
+它是给 Codex、Claude Code、Cursor、Windsurf、Gemini CLI 这类 coding agents 用的 **UI scout skill**：让 AI 先去 GitHub 上高星、成熟、好看的前端项目里学习别人怎么做 UI，再根据你的页面类型、产品气质、技术栈和生产约束重组出适合当前项目的方案。
+
+别再让 AI 闭门造车了。GitHub 上已经有那么多成熟的 dashboard、landing page、AI chat、editor workspace、mobile UI、icons、tokens、forms、charts 和 motion 项目。Open UI Scout 囊括了 **700+ 个 GitHub 前端 UI 项目引用**，做的就是让 AI 先去真实项目里找对参考，再按你的场景重组。
+
+> 这里的“参考”不是复制粘贴别人的代码，而是学习成熟项目的结构、组件选择、视觉节奏和交互模式；真正使用第三方代码前，仍然要检查 license、维护状态和项目适配性。
+
+## 它解决的真实痛点
+
+很多时候，问题不是你提示词写得不够好，而是 AI 没有先看项目、看生态、看真实 UI 怎么落地。
+
+你可能已经把 prompt 写得很细：要高级、要现代、要 dashboard、要响应式、要好看。结果生成出来还是不对：风格像别的产品，组件不贴现有项目，依赖随便加，页面能跑但不像能上线。
+
+| 常见翻车 | Open UI Scout 怎么处理 |
+| --- | --- |
+| 提示词写得很到位，生成出来却像另一个项目 | 先检查当前技术栈、现有 UI 库、组件组织和设计 token |
+| AI 默认黑紫科技风，什么产品都像 AI SaaS 官网 | 先判断页面类型和 visual mood，不默认科技感 |
+| 为了一个卡片引入一整套大 UI 库 | 限制最多 3 个主要 UI 来源，并评估依赖成本 |
+| 组件看起来不错，但不适配 Next / Vue / Tailwind / 企业项目 | 先按技术栈、生产约束和维护状态评分候选资源 |
+| AI 凭空发明组件 API 或乱混 Ant Design、MUI、shadcn/ui | 从 700+ GitHub 资源池里选真实项目和真实库，避免凭空手搓 |
 
 ## 3 秒看懂
 
 ```text
-理解需求 -> 判断页面类型 -> 判断视觉气质 -> 检查现有技术栈 -> 评分候选资源 -> 最多选择 3 个主要 UI 来源 -> 生成一致的前端 UI
+理解需求 -> 扫描当前项目 -> 去 GitHub 资源池找参考 -> 评分候选 UI 来源 -> 最多选 3 个 -> 按项目重组实现
 ```
 
 Open UI Scout 会让 agent 先判断：

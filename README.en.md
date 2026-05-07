@@ -1,11 +1,11 @@
 ﻿# Open UI Scout
 
 <p align="center">
-  <strong>A frontend UI resource selection skill for AI coding agents</strong>
+  <strong>Stop letting AI hand-roll UI from nothing</strong>
 </p>
 
 <p align="center">
-  Understand the page, product mood, stack, and production constraints before choosing GitHub open-source UI resources.
+  Open UI Scout helps AI understand the page, product mood, and stack first, then select references from high-quality open-source frontend projects on GitHub.
 </p>
 
 <p align="center">
@@ -23,14 +23,32 @@
 
 ## What It Is
 
-Open UI Scout is a general, public-shareable frontend UI resource selection skill. It is not a UI library and it is not a fixed template. It gives Codex, Claude Code, Cursor, Windsurf, Gemini CLI, and similar coding agents a decision workflow before writing frontend code.
+Open UI Scout is not a prompt-writing guide.
 
-Its goal is simple: **do not let an agent default to black-purple AI aesthetics or one familiar UI library. Understand the product first, then select suitable open-source UI resources.**
+It is a **UI scout skill** for Codex, Claude Code, Cursor, Windsurf, Gemini CLI, and similar coding agents: before generating frontend code, the agent studies mature, good-looking GitHub frontend projects, then recombines the right UI patterns for your page type, product mood, technical stack, and production constraints.
+
+GitHub already has many mature dashboard, landing page, AI chat, editor workspace, mobile UI, icon, token, form, chart, and motion projects. Open UI Scout includes **700+ GitHub frontend UI project references** so AI can learn from real projects instead of inventing everything from scratch.
+
+> Using references does not mean copying someone else's code. It means learning structure, component choices, visual rhythm, and interaction patterns from mature projects. Before using third-party code, always verify license, maintenance status, and project fit.
+
+## The Pain It Solves
+
+Often the prompt is not the problem. The problem is that the agent did not inspect the current project, the ecosystem, or real UI implementations first.
+
+You can write a detailed prompt: make it modern, premium, responsive, dashboard-like, and beautiful. The result can still feel wrong: the style belongs to another product, the components do not fit the existing stack, dependencies are added casually, and the page runs but does not feel production-ready.
+
+| Common Failure | How Open UI Scout Helps |
+| --- | --- |
+| The prompt is detailed, but the result feels like another product | Inspect the current stack, existing UI library, component structure, and design tokens first |
+| AI defaults every product to black-purple AI SaaS aesthetics | Classify page type and visual mood before choosing resources |
+| A full UI library gets added for one card | Limit each task to at most 3 primary UI sources and score dependency cost |
+| A good-looking component does not fit Next / Vue / Tailwind / enterprise constraints | Score candidates for stack match, production constraints, and maintenance |
+| AI invents component APIs or mixes Ant Design, MUI, and shadcn/ui randomly | Select real projects and real libraries from the 700+ GitHub resource pool |
 
 ## 3-Second Workflow
 
 ```text
-Understand request -> Classify page type -> Classify visual mood -> Inspect stack -> Score candidates -> Select up to 3 primary UI sources -> Generate consistent UI
+Understand request -> Inspect current project -> Scout GitHub UI references -> Score candidate UI sources -> Select up to 3 -> Recombine for the project
 ```
 
 Open UI Scout asks the agent to identify:
