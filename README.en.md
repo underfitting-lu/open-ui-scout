@@ -45,6 +45,21 @@ You can write a detailed prompt: make it modern, premium, responsive, dashboard-
 | A good-looking component does not fit Next / Vue / Tailwind / enterprise constraints | Score candidates for stack match, production constraints, and maintenance |
 | AI invents component APIs or mixes Ant Design, MUI, and shadcn/ui randomly | Select real projects and real libraries from the 700+ GitHub resource pool |
 
+## Before / After
+
+The same prompt leads to very different behavior.
+
+| Dimension | Without Open UI Scout | With Open UI Scout |
+| --- | --- | --- |
+| Starting point | AI starts hand-rolling UI immediately | Inspect the current project, then scout GitHub references |
+| Style | Often defaults to generic tech aesthetics or a template look | Classify page type, product mood, and user context first |
+| UI sources | Generated from model memory | Selected from 700+ GitHub frontend UI project references |
+| Project fit | The prompt may be right, but the UI stack may be wrong | Match framework, UI library, design tokens, and folder conventions first |
+| Dependency control | A large library may be added for one component | Use at most 3 primary UI sources and score dependency cost |
+| Production quality | Loading, empty, error, responsive, and accessibility states are often missed | Treat states, accessibility, license, and maintenance as checks |
+
+Full example: [Before / After case study](BEFORE_AFTER.md)
+
 ## 3-Second Workflow
 
 ```text

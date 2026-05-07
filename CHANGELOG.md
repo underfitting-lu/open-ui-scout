@@ -4,6 +4,7 @@
 
 - Repositioned the GitHub homepage around GitHub UI scouting instead of prompt writing.
 - Added clearer pain points around prompt-fit vs project-fit and AI-generated UI that ignores existing stacks.
+- Added a Before / After case study showing the benefit of using Open UI Scout.
 
 ## 0.1.4
 

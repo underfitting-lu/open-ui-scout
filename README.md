@@ -45,6 +45,21 @@ Open UI Scout 不是教 AI 写 prompt。
 | 组件看起来不错，但不适配 Next / Vue / Tailwind / 企业项目 | 先按技术栈、生产约束和维护状态评分候选资源 |
 | AI 凭空发明组件 API 或乱混 Ant Design、MUI、shadcn/ui | 从 700+ GitHub 资源池里选真实项目和真实库，避免凭空手搓 |
 
+## 使用前 / 使用后
+
+同一个 prompt，结果会完全不一样。
+
+| 维度 | 不使用 Open UI Scout | 使用 Open UI Scout |
+| --- | --- | --- |
+| 起点 | AI 直接开始手搓 UI | 先检查当前项目，再去 GitHub 资源池找参考 |
+| 风格 | 容易套默认科技风或通用模板 | 根据页面类型、产品气质和用户上下文判断 |
+| UI 来源 | 凭模型记忆生成 | 从 700+ GitHub 前端 UI 项目里选择候选来源 |
+| 项目适配 | prompt 对了，但组件体系可能不对 | 先匹配框架、UI 库、设计 token 和目录结构 |
+| 依赖控制 | 容易为了一个组件引入大库 | 最多 3 个主要 UI 来源，评估依赖成本 |
+| 生产质量 | 容易漏 loading、empty、error、响应式和可访问性 | 把状态、可访问性、license、维护状态纳入检查 |
+
+看完整示例：[Before / After 对比案例](BEFORE_AFTER.md)
+
 ## 3 秒看懂
 
 ```text

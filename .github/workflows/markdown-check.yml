@@ -17,6 +17,7 @@ jobs:
           test -f SKILL.md
           test -f README.md
           test -f README.en.md
+          test -f BEFORE_AFTER.md
           test -f RESOURCE_POOL.md
           test -f AGENTS.md
           test -f .claude/skills/open-ui-scout/SKILL.md
